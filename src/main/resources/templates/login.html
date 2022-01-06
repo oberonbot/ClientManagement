@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"  >
+    <title>客户管理系统</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css" type="text/css" />
+</head>
+<body>
+<div id="login">
+    <el-container>
+        <el-header><h1>登录</h1></el-header>
+        <el-main>
+            <el-main class="login_window">
+                <el-form label-position="labelPosition">
+                        <el-input class="input" type="text" prop="name" v-model="loginForm.name" autocomplete="off" placeholder="账号"></el-input>
+                        <el-input class="input" type="password" prop="password" v-model="loginForm.password" autocomplete="off" placeholder="密码"></el-input>
+                    <div class="buttons">
+                        <el-button class="button" @click="handleLogin" type="primary">登录</el-button>
+                        <el-button class="button" @click="visible = true" type="primary">注册</el-button>
+                    </div>
+                </el-form>
+
+                <el-dialog class="dialog" :visible.sync="visible" title="注册信息">
+                    <el-form label-position="labelPosition">
+                            <el-input class="input2" type="text" prop="name" v-model="regisForm.name" placeholder="账号"></el-input>
+                            <el-input class="input2" type="password" prop="password" v-model="regisForm.password" autocomplete="off" placeholder="密码"></el-input>
+                            <el-input class="input2"  type="password" prop="password" v-model="regisForm.checkpassword" autocomplete="off" placeholder="确认密码"></el-input>
+                        <el-button type="primary" @click="handleRegister">注册</el-button>
+                    </el-form>
+
+                </el-dialog>
+
+            </el-main>
+        </el-main>
+        <el-footer>Footer</el-footer>
+    </el-container>
+</div>
+
+</body>
+
+<div th:replace="common :: common_script"></div>
+<script src="js/login.js"></script>
+
+</html>

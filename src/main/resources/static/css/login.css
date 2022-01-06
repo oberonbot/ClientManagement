@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.el-header {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 20px;
+}
+
+.el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+}
+
+.el-main {
+    background-color: #e9eef3;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+    height:580px;
+}
+
+.login_window{
+    margin: 100px 100px 100px 485px;
+    width: 35%;
+    height: 45%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+
+.buttons{
+    display: flex;
+    margin-left: 65px;
+    margin-top: 15px;
+}
+.button{
+    width:100px;
+    margin-left: 48px;
+    margin-right: 40px;
+
+}
+.input{
+    width: 300px;
+}
+
+.dialog{
+    width: 1000px;
+    height: 600px;
+    margin-left: 270px;
+}
+
+.input2{
+    width: 400px
+}
