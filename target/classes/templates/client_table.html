@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>客户管理系统</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/client_table.css" type="text/css" />
+</head>
+<body>
+    <div id="app">
+        <el-container>
+            <div th:replace="common :: el_aside"></div>
+            <el-container>
+                <el-header>客户管理系统</el-header>
+                <el-main>
+                    <el-form :inline="true" v-model="formSearch" class="demo-form-inline">
+                        <el-form-item label="用户ID">
+                            <el-input v-model="formSearch.clientId" placeholder="请输入客户ID"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户名称">
+                            <el-input v-model="formSearch.clientName" placeholder="请输入客户名称"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户电话">
+                            <el-input v-model="formSearch.clientPhone" placeholder="请输入客户电话"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button  @click="handleSearch">查询</el-button>
+                        </el-form-item>
+                        <el-button  @click="visible = true">添加</el-button>
+                        <el-button  @click="handleDisplay">全部显示</el-button>
+                        <el-dialog :visible.sync="visible" title="请输入要添加的客户信息">
+                            <el-form :inline="true" v-model="formAdd" class="demo-form-inline">
+                                <el-form-item label="用户ID">
+                                    <el-input v-model="formAdd.clientId" placeholder="请输入客户ID"></el-input>
+                                </el-form-item>
+                                <el-form-item label="用户名称">
+                                    <el-input v-model="formAdd.clientName" placeholder="请输入客户名称"></el-input>
+                                </el-form-item>
+                                <el-form-item label="用户电话">
+                                    <el-input v-model="formAdd.clientPhone" placeholder="请输入客户电话"></el-input>
+                                </el-form-item>
+                                <el-form-item>
+                                    <el-button @click="handleAdd">确定添加</el-button>
+                                </el-form-item>
+                            </el-form>
+                        </el-dialog>
+                    </el-form>
+                </el-main>
+                <el-main class="el-main-table">
+                    <el-table :data="tableData" stripe style="width: 58%; height: 440px; margin-left: 280px" >
+                        <el-table-column
+                                prop="id"
+                                label="客户ID"
+                                width="170">
+                        </el-table-column>
+                        <el-table-column
+                                prop="name"
+                                label="客户姓名"
+                                width="160">
+                        </el-table-column>
+                        <el-table-column
+                                prop="phone"
+                                label="客户电话"
+                                width="200">
+                        </el-table-column>
+                        <el-table-column
+                                label="操作"
+                                width="200">
+                            <template slot-scope="scope" :inline="true">
+                                <el-button
+                                        size="mini"
+                                        @click="showEdit(scope.row)">编辑</el-button>
+                                <el-button
+                                        size="mini"
+                                        type="danger"
+                                        @click="handleDelete(scope.row)">删除</el-button>
+                            </template>
+                        </el-table-column>
+                    </el-table>
+                    <el-dialog :visible.sync="edit_visible" title="请输入要修改的客户信息">
+
+                        <el-form :inline="true" v-model="formEdit_after" class="demo-form-inline">
+                            <el-form-item label="用户ID">
+                                <el-input v-model="formEdit_after.id_after" placeholder="请输入客户ID"></el-input>
+                            </el-form-item>
+                            <el-form-item label="用户名称">
+                                <el-input v-model="formEdit_after.name_after" placeholder="请输入客户名称"></el-input>
+                            </el-form-item>
+                            <el-form-item label="用户电话">
+                                <el-input v-model="formEdit_after.phone_after" placeholder="请输入客户电话"></el-input>
+                            </el-form-item>
+                            <el-form-item>
+                                <el-button @click="confirmEdit">确定修改</el-button>
+                            </el-form-item>
+                        </el-form>
+                    </el-dialog>
+                    <el-pagination
+                            background
+                            layout="prev, pager, next"
+                            :total="total"
+                            :current-page="current_page"
+                            :page-size="page_size"
+                            @current-change="current_change"
+                            @prev-click="prev_click"
+                            @next-click="next_click">
+                    </el-pagination>
+                </el-main>
+            </el-container>
+        </el-container>
+
+    </div>
+
+</body>
+
+<div th:replace="common :: common_script"></div>
+<script src="js/client_table.js"></script>
+</html>

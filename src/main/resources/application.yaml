@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydb
+    username: root
+    password: 980920
+
+  thymeleaf:
+    cache: false
+
+# 配置Mybatis规则
+mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+#  可以不写全局配置文件，所有的配置都写在configuration里就可以
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

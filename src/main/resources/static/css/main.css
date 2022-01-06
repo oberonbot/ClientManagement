@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.el-header {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+}
+
+.el-main {
+    background-color: #e9eef3;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+}
+
+.el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+}
+
+.el-form {
+    background-color: #e9eef3;
+    colar: #333;
+    text-align: center;
+    line-height: 40px;
+}
+
+.el-input {
+    width:130px;
+}
+
+.el-dialog__header{
+    background-color:#B3C0D1;
+    font-size: larger;
+}
+
+.el-dialog__body{
+    background-color:#e9eef3;
+}
+
+el-main-table{
+    background-color: #e9eef3;
+    color: #333;
+    text-align: center;
+}

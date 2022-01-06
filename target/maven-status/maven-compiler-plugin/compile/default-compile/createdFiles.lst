@@ -1,0 +1,13 @@
+com\demo\clientmanage\bootclientaddresslist\interceptor\LoginInterceptor.class
+com\demo\clientmanage\bootclientaddresslist\config\AdminWebConfig.class
+com\demo\clientmanage\bootclientaddresslist\controller\ClientManageController.class
+com\demo\clientmanage\bootclientaddresslist\service\impl\UserServiceImpl.class
+com\demo\clientmanage\bootclientaddresslist\service\ClientService.class
+com\demo\clientmanage\bootclientaddresslist\config\MyBatisConfig.class
+com\demo\clientmanage\bootclientaddresslist\mapper\ClientMapper.class
+com\demo\clientmanage\bootclientaddresslist\bean\User.class
+com\demo\clientmanage\bootclientaddresslist\BootClientaddresslistApplication.class
+com\demo\clientmanage\bootclientaddresslist\service\UserService.class
+com\demo\clientmanage\bootclientaddresslist\mapper\UserMapper.class
+com\demo\clientmanage\bootclientaddresslist\bean\Client.class
+com\demo\clientmanage\bootclientaddresslist\service\impl\ClientServiceImpl.class

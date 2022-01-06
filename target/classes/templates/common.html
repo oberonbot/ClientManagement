@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>公共部分</title>
+</head>
+<body>
+<div th:fragment="el_aside" >
+    <el-aside width="200px">
+        <el-col :span="24">
+            <el-menu
+                    default-active="2"
+                    class="el-menu-vertical-demo"
+                    @open="handleOpen"
+                    @close="handleClose">
+                <!-- 当前激活的index -->
+                <el-menu-item index="1" @click="handle_tomain">
+                    <i class="el-icon-menu"></i>
+                    <span slot="title">首页</span>
+                </el-menu-item>
+                <el-submenu index="2">
+                    <template slot="title">
+                        <i class="el-icon-location"></i>
+                        <span>信息管理</span>
+                    </template>
+                    <el-menu-item-group>
+                        <el-menu-item index="1-1" @click="handle_client_manage">客户信息管理</el-menu-item>
+                        <el-menu-item index="1-2">选项2</el-menu-item>
+                    </el-menu-item-group>
+                </el-submenu>
+                <el-menu-item index="3" >
+                    <i class="el-icon-document"></i>
+                    <span slot="title">导航三</span>
+                </el-menu-item>
+            </el-menu>
+        </el-col>
+    </el-aside>
+</div>
+
+<div th:fragment="common_script">
+    <script src="js/vue.js"></script>
+    <script src="js/ElementUI.js"></script>
+    <script src="js/axios.min.js"></script>
+</div>
+
+
+</body>
+</html>

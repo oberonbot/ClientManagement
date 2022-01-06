@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.clientmanage.bootclientaddresslist.admin.BootClientaddresslistApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.595 s <<< FAILURE! - in com.demo.clientmanage.bootclientaddresslist.admin.BootClientaddresslistApplicationTests
+testClientMapper  Time elapsed: 2.122 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value '������׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specific time zone value if you want to utilize time zone support.
+### The error may exist in com/demo/clientmanage/bootclientaddresslist/mapper/ClientMapper.java (best guess)
+### The error may involve com.demo.clientmanage.bootclientaddresslist.mapper.ClientMapper.selectById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value '������׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specific time zone value if you want to utilize time zone support.
+	at com.demo.clientmanage.bootclientaddresslist.admin.BootClientaddresslistApplicationTests.testClientMapper(BootClientaddresslistApplicationTests.java:21)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value '������׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specific time zone value if you want to utilize time zone support.
+### The error may exist in com/demo/clientmanage/bootclientaddresslist/mapper/ClientMapper.java (best guess)
+### The error may involve com.demo.clientmanage.bootclientaddresslist.mapper.ClientMapper.selectById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value '������׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specific time zone value if you want to utilize time zone support.
+	at com.demo.clientmanage.bootclientaddresslist.admin.BootClientaddresslistApplicationTests.testClientMapper(BootClientaddresslistApplicationTests.java:21)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value '������׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specific time zone value if you want to utilize time zone support.
+	at com.demo.clientmanage.bootclientaddresslist.admin.BootClientaddresslistApplicationTests.testClientMapper(BootClientaddresslistApplicationTests.java:21)
+Caused by: java.sql.SQLException: The server time zone value '������׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specific time zone value if you want to utilize time zone support.
+	at com.demo.clientmanage.bootclientaddresslist.admin.BootClientaddresslistApplicationTests.testClientMapper(BootClientaddresslistApplicationTests.java:21)
+Caused by: com.mysql.cj.exceptions.InvalidConnectionAttributeException: The server time zone value '������׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specific time zone value if you want to utilize time zone support.
+	at com.demo.clientmanage.bootclientaddresslist.admin.BootClientaddresslistApplicationTests.testClientMapper(BootClientaddresslistApplicationTests.java:21)
+
